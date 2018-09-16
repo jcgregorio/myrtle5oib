@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>High Seas Zen - 5 Myrtle Court, Ocean Isle Beach, NC</title>
+
+    <style media='screen'>
+body {
+  padding: 0;
+  font-family: "Roboto", Arial, Helvetica, "Noto Sans", sans-serif;
+  font-size: 18px;
+  line-height: 150%;
+  max-width: 1024px;
+  margin: auto;
+}
+
+header {
+  background: url('/images/hero.jpg');
+  background-repeat: no-repeat;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  display: block;
+  color: white;
+  padding: 2em;
+}
+
+header section {
+  background: rgba(73, 123, 167, 0.9);
+  padding: 1em;
+  display: inline-block;
+  border-radius: 2em;
+}
+
+main {
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+#main {
+  padding: 0.6em;
+}
+
+main img {
+  margin-top: 0.6em;
+  margin-left: 0.6em;
+}
+
+.hl {
+  color: white;
+  background: #497ba7;
+  padding: 0.2em 0.4em;
+  border-radius: 0.4em;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0.4em 0 0.4em 0.4em;
+}
+
+section.tab {
+  display: none;
+}
+
+section.tab.active {
+  display: flex;
+  flex-wrap: wrap;
+}
+    </style>
+  </head>
+  <body>
+    <header>
+      <section>
+    <h1>Welcome to High Seas Zen</h1>
+    <p>Your summer vacation get away on Ocean Isle Beach, NC</p>
+      </section>
+    </header>
+
+    <main>
+      <nav>
+        <ul>
+          <li data-id=main class=active>Home</li>
+          <li data-id=tour>Tour</li>
+          <li data-id=oib>OIB</li>
+          <li data-id=rental>Rental</li>
+          <li data-id=contact>Contact</li>
+        </ul>
+      </nav>
+      <section id=main class="active tab">
+        <!-- Need picture of front of house -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3293.4338940538746!2d-78.4685485217728!3d33.880114052767865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89009ca8e49bd325%3A0xa0186a8fd2ab83a4!2s5+Myrtle+Ct%2C+Ocean+Isle+Beach%2C+NC+28469!5e1!3m2!1sen!2sus!4v1537056734344"
+          width="400" height="300" frameborder="0" style="border:0"
+          allowfullscreen></iframe>
+        <div>
+          <ul>
+            <li title="4 bedrooms, 1 king, 2 queen, 2 twin, 1 sofa bed">Bedrooms <span class=hl>4</span> - 1K,2Q,2T,1SB</li>
+            <li>Baths <span class=hl>3.5</span></li>
+            <li><span class=hl>60</span> steps to beach access</li>
+            <li>Sleeps <span class=hl>10</span></li>
+            <li>Across the street from The Isles Restaurant</li>
+          </ul>
+        </div>
+      </section>
+      <section id=tour class=tab>
+        <img src=/thumb/IMG_20180630_103623.jpg>
+        <img src=/thumb/IMG_20180721_112656.jpg>
+        <img src=/thumb/IMG_20180721_112716.jpg>
+        <img src=/thumb/IMG_20180721_112742.jpg>
+        <img src=/thumb/IMG_20180721_112749.jpg>
+        <img src=/thumb/IMG_20180721_131432.jpg>
+
+        <img src=/thumb/IMG_20180811_170024.jpg>
+        <img src=/thumb/IMG_20180813_180725.jpg>
+        <img src=/thumb/IMG_20180814_170447.jpg>
+        <img src=/thumb/IMG_20180815_185925.jpg>
+        <img src=/thumb/IMG_20180815_230358.jpg>
+        <img src=/thumb/IMG_20180816_145537.jpg>
+
+        <img src=/thumb/IMG_20180816_145650.jpg>
+        <img src=/thumb/IMG_20180816_145715.jpg>
+        <img src=/thumb/IMG_20180816_145737.jpg>
+        <img src=/thumb/IMG_20180816_145817.jpg>
+        <img src=/thumb/IMG_20180825_200438.jpg>
+      </section>
+      <section id=oib class=tab>
+        <img src=/thumb/IMG_20180721_131043.jpg>
+        <img src=/thumb/IMG_20180721_131508.jpg>
+        <img src=/thumb/IMG_20180721_131524.jpg>
+        <img src=/thumb/IMG_20180721_132156.jpg>
+        <img src=/thumb/IMG_20180815_185933.jpg>
+        <img src=/thumb/IMG_20180815_230453.jpg>
+        <img src=/thumb/IMG_20180815_230502.jpg>
+        <img src=/thumb/IMG_20180816_145632.jpg>
+        <img src=/thumb/IMG_20180816_145646.jpg>
+      </section>
+    </main>
+    <footer>
+      <p>
+        5 Myrtle Ct,
+        Ocean Isle Beach, NC
+      </p>
+    </footer>
+    <script type='text/javascript' charset='utf-8'>
+      (function () {
+        let $ = (query, ele = document) => {
+          return Array.prototype.slice.call(ele.querySelectorAll(query));
+        };
+
+        let tabs = $('nav li');
+        let panels = $('main .tab');
+
+        tabs.forEach(e => {
+          e.addEventListener('click', e => tabClicked(e));
+        })
+
+        function tabClicked(e) {
+          console.log(e.target.dataset.id);
+        }
+
+      })();
+    </script>
+  </body>
+</html>
