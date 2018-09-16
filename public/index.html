@@ -6,89 +6,103 @@
     <title>High Seas Zen - 5 Myrtle Court, Ocean Isle Beach, NC</title>
 
     <style media='screen'>
-body {
-  padding: 0;
-  font-family: "Roboto", Arial, Helvetica, "Noto Sans", sans-serif;
-  font-size: 18px;
-  line-height: 150%;
-  max-width: 1024px;
-  margin: auto;
-}
+      body {
+        padding: 0;
+        font-family: "Roboto", Arial, Helvetica, "Noto Sans", sans-serif;
+        font-size: 18px;
+        line-height: 150%;
+        max-width: 1024px;
+        margin: auto;
+      }
 
-header {
-  background: url('/images/hero.jpg');
-  background-repeat: no-repeat;
-  border: 0;
-  padding: 0;
-  margin: 0;
-  display: block;
-  color: white;
-  padding: 2em;
-}
+      header {
+        background: url('/images/hero.jpg');
+        background-repeat: no-repeat;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        display: block;
+        color: white;
+        padding: 2em;
+      }
 
-header section {
-  background: rgba(73, 123, 167, 0.9);
-  padding: 1em;
-  display: inline-block;
-  border-radius: 2em;
-}
+      header section {
+        background: rgba(73, 123, 167, 0.9);
+        padding: 1em;
+        display: inline-block;
+        border-radius: 2em;
+      }
 
-main {
-}
+      footer {
+        display: flex;
+        justify-content: center;
+      }
 
-footer {
-  display: flex;
-  justify-content: center;
-}
+      #main {
+        padding: 0.6em;
+      }
 
-#main {
-  padding: 0.6em;
-}
+      main img {
+        margin-top: 0.6em;
+        margin-left: 0.6em;
+      }
 
-main img {
-  margin-top: 0.6em;
-  margin-left: 0.6em;
-}
+      .hl {
+        color: white;
+        background: #497ba7;
+        padding: 0.2em 0.4em;
+        border-radius: 0.4em;
+      }
 
-.hl {
-  color: white;
-  background: #497ba7;
-  padding: 0.2em 0.4em;
-  border-radius: 0.4em;
-}
+      nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+      }
 
-nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-}
+      nav li {
+        list-style-type: none;
+        display: inline-block;
+        margin: 0.4em 0 0.4em 0.4em;
+        padding: 0.2em 0.4em;
+        border: lightgray 1px solid;
+      }
 
-nav li {
-  list-style-type: none;
-  display: inline-block;
-  margin: 0.4em 0 0.4em 0.4em;
-  padding: 0.2em 0.4em;
-  border: lightgray 1px solid;
-}
+      nav li.active {
+        background: #eee;
+        border: gray 1px solid;
+      }
 
-nav li.active {
-  background: #eee;
-  border: gray 1px solid;
-}
+      nav {
+        width: 1000px;
+      }
 
-nav {
-  width: 1000px;
-}
+      section.tab {
+        display: none;
+      }
 
-section.tab {
-  display: none;
-}
+      section.tab.active {
+        display: flex;
+        flex-wrap: wrap;
+      }
 
-section.tab.active {
-  display: flex;
-  flex-wrap: wrap;
-}
+      figure {
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      figcaption {
+        margin: 1em;
+        width: 128px;
+        font-size: 14px;
+        line-height: normal;
+      }
+
+      figcaption ul {
+        padding-inline-start: 0.8em;
+      }
     </style>
   </head>
   <body>
@@ -134,6 +148,24 @@ section.tab.active {
             <li data-id=bedrooms>Bedrooms</li>
           </ul>
         </nav>
+        <section id=exterior class="tab active">
+          <figure>
+            <img src=/thumb/IMG_20180721_131043.jpg>
+            <figcaption>
+              <ul>
+                <li>
+                  Public beach access just 60 steps away.
+                </li>
+            </figcaption>
+          </figure>
+          <img src=/thumb/IMG_20180721_131508.jpg>
+          <img src=/thumb/IMG_20180721_131524.jpg>
+          <img src=/thumb/IMG_20180721_132156.jpg>
+          <img src=/thumb/IMG_20180825_200438.jpg>
+          <img src=/thumb/IMG_20180811_170024.jpg>
+          <img src=/thumb/IMG_20180721_131432.jpg>
+          <img src=/thumb/IMG_20180630_103623.jpg>
+        </section>
         <section id=upstairs class="tab">
           <img src=/thumb/IMG_20180721_112656.jpg>
           <img src=/thumb/IMG_20180721_112749.jpg>
@@ -166,16 +198,6 @@ section.tab.active {
           <img src=/thumb/IMG_20180816_145646.jpg>
           <img src=/thumb/IMG_20180721_112742.jpg>
           <img src=/thumb/IMG_20180814_170447.jpg>
-        </section>
-        <section id=exterior class="tab active">
-          <img src=/thumb/IMG_20180721_131043.jpg>
-          <img src=/thumb/IMG_20180721_131508.jpg>
-          <img src=/thumb/IMG_20180721_131524.jpg>
-          <img src=/thumb/IMG_20180721_132156.jpg>
-          <img src=/thumb/IMG_20180825_200438.jpg>
-          <img src=/thumb/IMG_20180811_170024.jpg>
-          <img src=/thumb/IMG_20180721_131432.jpg>
-          <img src=/thumb/IMG_20180630_103623.jpg>
         </section>
       </section>
       <section id=oib class=tab>
