@@ -68,6 +68,13 @@ nav li {
   list-style-type: none;
   display: inline-block;
   margin: 0.4em 0 0.4em 0.4em;
+  padding: 0.2em 0.4em;
+  border: lightgray 1px solid;
+}
+
+nav li.active {
+  background: #eee;
+  border: gray 1px solid;
 }
 
 section.tab {
@@ -146,6 +153,14 @@ section.tab.active {
         <img src=/thumb/IMG_20180816_145632.jpg>
         <img src=/thumb/IMG_20180816_145646.jpg>
       </section>
+      <section id=rental class=tab>
+        <div>
+          Coming soon!
+        </div>
+      </section>
+      <section id=contact class=tab>
+        myrtle5oib@gmail.com
+      </section>
     </main>
     <footer>
       <p>
@@ -160,14 +175,21 @@ section.tab.active {
         };
 
         let tabs = $('nav li');
-        let panels = $('main .tab');
+        let panels = $('main section.tab');
 
         tabs.forEach(e => {
           e.addEventListener('click', e => tabClicked(e));
         })
 
         function tabClicked(e) {
-          console.log(e.target.dataset.id);
+          tabs.forEach(ele => {
+            ele.classList.remove('active');
+          });
+          panels.forEach(ele => {
+            ele.classList.remove('active');
+          });
+          e.target.classList.add('active');
+          $('#' + e.target.dataset.id)[0].classList.add('active');
         }
 
       })();
