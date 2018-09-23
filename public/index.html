@@ -3,8 +3,7 @@
   <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title>High Seas Zen - 5 Myrtle Court, Ocean Isle Beach, NC</title>
-
+    <title>High-Seas Zen - 5 Myrtle Court, Ocean Isle Beach, NC</title>
     <style media='screen'>
       body {
         padding: 0;
@@ -36,15 +35,29 @@
       footer {
         display: flex;
         justify-content: center;
+        padding: 1em 0;
+        border-top: solid gray 1px;
       }
 
       #main {
         padding: 0.6em;
       }
 
+      #main li {
+        padding: 0.1em;
+      }
+
+      #steps {
+        max-width: 90%;
+      }
+
       main img {
         margin-top: 0.6em;
         margin-left: 0.6em;
+      }
+
+      main > section div {
+        margin: 2em;
       }
 
       .hl {
@@ -67,6 +80,7 @@
         margin: 0.4em 0 0.4em 0.4em;
         padding: 0.2em 0.4em;
         border: lightgray 1px solid;
+        cursor: pointer;
       }
 
       nav li.active {
@@ -75,7 +89,7 @@
       }
 
       nav {
-        width: 1000px;
+        max-width: 1000px;
       }
 
       section.tab {
@@ -108,7 +122,7 @@
   <body>
     <header>
       <section>
-    <h1>Welcome to High Seas Zen</h1>
+    <h1>Welcome to High-Seas Zen</h1>
     <p>Your summer vacation get away on Ocean Isle Beach, NC</p>
       </section>
     </header>
@@ -124,20 +138,15 @@
         </ul>
       </nav>
       <section id=main class="active tab">
-        <!-- Need picture of front of house -->
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3293.4338940538746!2d-78.4685485217728!3d33.880114052767865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89009ca8e49bd325%3A0xa0186a8fd2ab83a4!2s5+Myrtle+Ct%2C+Ocean+Isle+Beach%2C+NC+28469!5e1!3m2!1sen!2sus!4v1537056734344"
-          width="400" height="300" frameborder="0" style="border:0"
-          allowfullscreen></iframe>
-        <div>
-          <ul>
-            <li title="4 bedrooms, 1 king, 2 queen, 2 twin, 1 sofa bed">Bedrooms <span class=hl>4</span> - 1K,2Q,2T,1SB</li>
-            <li>Baths <span class=hl>3.5</span></li>
-            <li><span class=hl>60</span> steps to beach access</li>
-            <li>Sleeps <span class=hl>10</span></li>
-            <li>Across the street from The Isles Restaurant</li>
-          </ul>
-        </div>
+        <img src=/thumb/IMG_20180721_131508.jpg>
+        <ul>
+          <li><span class=hl>60</span> steps to beach access</li>
+          <li title="4 bedrooms, 1 king, 2 queen, 2 twin, 1 sofa bed">Bedrooms <span class=hl>4</span> - 1K, 2Q, 2T, 1SB</li>
+          <li><span class=hl>2.5</span> Baths</li>
+          <li>Sleeps <span class=hl>10</span></li>
+          <li>Across the street from The Isles Restaurant</li>
+        </ul>
+        <img id=steps src=/thumb/steps.jpg>
       </section>
       <section id=tour class=tab>
         <nav>
@@ -158,7 +167,6 @@
                 </li>
             </figcaption>
           </figure>
-          <img src=/thumb/IMG_20180721_131508.jpg>
           <img src=/thumb/IMG_20180721_131524.jpg>
           <img src=/thumb/IMG_20180721_132156.jpg>
           <img src=/thumb/IMG_20180825_200438.jpg>
@@ -167,8 +175,27 @@
           <img src=/thumb/IMG_20180630_103623.jpg>
         </section>
         <section id=upstairs class="tab">
-          <img src=/thumb/IMG_20180721_112656.jpg>
-          <img src=/thumb/IMG_20180721_112749.jpg>
+          <figure>
+            <img src=/thumb/IMG_20180721_112742.jpg>
+            <figcaption>
+              <ul>
+                <li>Queen bed.</li>
+                <li>Closet</li>
+                <li>Dresser</li>
+                <li>Jack and Jill Bathroom</li>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src=/thumb/IMG_20180721_112749.jpg>
+            <figcaption>
+              <ul>
+                <li>Two twin beds</li>
+                <li>Closet</li>
+                <li>Dresser</li>
+                <li>Jack and Jill Bathroom</li>
+                <li>TV</li>
+            </figcaption>
+          </figure>
         </section>
         <section id=downstairs class="tab">
           <img src=/thumb/IMG_20180721_112716.jpg>
@@ -182,6 +209,7 @@
           <img src=/thumb/IMG_20180815_230502.jpg>
 
           <!-- downstairs bedrooms -->
+          <img src=/thumb/IMG_20180721_112656.jpg>
           <img src=/thumb/IMG_20180816_145632.jpg>
           <img src=/thumb/IMG_20180816_145646.jpg>
           <img src=/thumb/IMG_20180721_112742.jpg>
@@ -196,7 +224,6 @@
           <!-- downstairs -->
           <img src=/thumb/IMG_20180816_145632.jpg>
           <img src=/thumb/IMG_20180816_145646.jpg>
-          <img src=/thumb/IMG_20180721_112742.jpg>
           <img src=/thumb/IMG_20180814_170447.jpg>
         </section>
       </section>
@@ -204,6 +231,10 @@
         <div>
           Coming soon!
         </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3293.4338940538746!2d-78.4685485217728!3d33.880114052767865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89009ca8e49bd325%3A0xa0186a8fd2ab83a4!2s5+Myrtle+Ct%2C+Ocean+Isle+Beach%2C+NC+28469!5e1!3m2!1sen!2sus!4v1537056734344"
+          width="400" height="300" frameborder="0" style="border:0"
+                                                   allowfullscreen></iframe>
       </section>
       <section id=rental class=tab>
         <div>
@@ -211,14 +242,18 @@
         </div>
       </section>
       <section id=contact class=tab>
-        myrtle5oib@gmail.com
+        <div>
+          <a href="mailto:myrtle5oib@gmail.com" target=_blank>myrtle5oib@gmail.com</a>
+        </div>
       </section>
     </main>
     <footer>
-      <p>
-        5 Myrtle Ct,
-        Ocean Isle Beach, NC
-      </p>
+      <div itemscope itemtype="http://schema.org/PostalAddress">
+        <span itemprop="streetAddress">5 Myrtle Court</span><br>
+        <span itemprop="addressLocality">Ocean Isle Beach</span>,
+        <span itemprop="addressRegion">NC</span>
+        <span itemprop="postalCode">28469</span><br>
+      </div>
     </footer>
     <script type='text/javascript' charset='utf-8'>
       (function () {
@@ -245,10 +280,8 @@
             $('#' + e.target.dataset.id)[0].classList.add('active');
           }
         }
-
         enableTabs('top');
         enableTabs('tour');
-
       })();
     </script>
   </body>
