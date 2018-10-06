@@ -1,0 +1,24 @@
+[debug] [2018-10-06T14:54:13.809Z] ----------------------------------------------------------------------
+[debug] [2018-10-06T14:54:13.812Z] Command:       /home/jcgregorio/node/bin/node /home/jcgregorio/node/bin/firebase serve --only hosting --port 8080
+[debug] [2018-10-06T14:54:13.812Z] CLI Version:   4.2.1
+[debug] [2018-10-06T14:54:13.812Z] Platform:      linux
+[debug] [2018-10-06T14:54:13.812Z] Node Version:  v8.12.0
+[debug] [2018-10-06T14:54:13.812Z] Time:          Sat Oct 06 2018 10:54:13 GMT-0400 (EDT)
+[debug] [2018-10-06T14:54:13.812Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-10-06T14:54:13.820Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-10-06T14:54:13.820Z] > authorizing via signed-in user
+[debug] [2018-10-06T14:54:13.822Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/heroic-muse-88515  
+ 
+[debug] [2018-10-06T14:54:14.263Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-06T14:54:14.267Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/heroic-muse-88515  
+ 
+[debug] [2018-10-06T14:54:14.479Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/home/jcgregorio/projects/myrtle5oib'...
+[info] 
+[debug] [2018-10-06T14:54:14.485Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/952643138919/clients/_:getWebAppConfig  
+ 
+[debug] [2018-10-06T14:54:14.716Z] <<< HTTP RESPONSE 200
+[info] i  hosting[heroic-muse-88515]: Serving hosting files from: public
+[info] ✔  hosting[heroic-muse-88515]: Local server: http://localhost:8080
