@@ -12,7 +12,7 @@
         font-family: "Roboto", Arial, Helvetica, "Noto Sans", sans-serif;
         font-size: 18px;
         line-height: 150%;
-        max-width: 1024px;
+        max-width: 1200px;
         margin: auto;
       }
 
@@ -94,7 +94,7 @@
       }
 
       nav {
-        max-width: 1000px;
+        width: 100%;
       }
 
       section.tab {
@@ -107,14 +107,15 @@
       }
 
       figure {
-        margin: 0;
+        margin: 0 0 0.4em 0;
         display: flex;
         flex-wrap: wrap;
+        flex-direction: column;
       }
 
       figcaption {
         margin: 1em;
-        width: 128px;
+        width: 250px;
         font-size: 14px;
         line-height: normal;
       }
@@ -174,12 +175,53 @@
                 </li>
             </figcaption>
           </figure>
-          <img src=/thumb/IMG_20180721_131524.jpg>
-          <img src=/thumb/IMG_20180721_132156.jpg>
-          <img src=/thumb/IMG_20180825_200438.jpg>
-          <img src=/thumb/IMG_20180811_170024.jpg>
-          <img src=/thumb/IMG_20180721_131432.jpg>
-          <img src=/thumb/IMG_20180630_103623.jpg>
+
+          <figure>
+            <img src=/thumb/IMG_20180721_131524.jpg>
+            <figcaption>
+              <ul>
+                <li>
+                  Front of house.
+                </li>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src=/thumb/IMG_20180721_132156.jpg>
+            <figcaption>
+              <ul>
+                <li>
+                  Front porch, facing ocean (view obstructed by trees).
+                </li>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src=/thumb/IMG_20180825_200438.jpg>
+            <figcaption>
+              <ul>
+                <li>
+                  Beach area.
+                </li>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src=/thumb/IMG_20180721_131432.jpg>
+            <figcaption>
+              <ul>
+                <li>
+                  Beach access is right across street, 60 steps. Photo taken
+                  from front of house looking directly at beach access.
+                </li>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src=/thumb/IMG_20180630_103623.jpg>
+            <figcaption>
+              <ul>
+                <li>
+                  Outdoor shower with seating area.
+                </li>
+            </figcaption>
+          </figure>
         </section>
         <section id=upstairs class="tab">
           <figure>
@@ -216,22 +258,70 @@
           <img src=/thumb/IMG_20180815_230502.jpg>
 
           <!-- downstairs bedrooms -->
-          <img src=/thumb/IMG_20180721_112656.jpg>
-          <img src=/thumb/IMG_20180816_145632.jpg>
-          <img src=/thumb/IMG_20180816_145646.jpg>
-          <img src=/thumb/IMG_20180721_112742.jpg>
-          <img src=/thumb/IMG_20180814_170447.jpg>
+          <figure>
+            <img src=/thumb/IMG_20180816_145650.jpg>
+            <figcaption>
+              <ul>
+                <li>
+                  Downstairs Jack and Jill, shower, (no tub), there is another half
+                  bath downstairs so you do not have to enter bedroom to use a
+                  bathroom.
+                </li>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src=/thumb/IMG_20180816_145715.jpg>
+            <figcaption>
+              <ul>
+                <li>Queen bed</li>
+                <li>TV</li>
+                <li>Closet</li>
+                <li>Jack and Jill bath</li>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src=/thumb/IMG_20180816_145646.jpg>
+            <figcaption>
+              <ul>
+                <li>
+                  Master bedroom, first floor, king bed, TV, connects to Jack
+                  and Jill bath
+                </li>
+            </figcaption>
+          </figure>
         </section>
         <section id=bedrooms class="tab">
-          <!-- upstairs -->
-          <img src=/thumb/IMG_20180816_145650.jpg>
-          <img src=/thumb/IMG_20180816_145715.jpg>
-          <img src=/thumb/IMG_20180816_145737.jpg>
-
-          <!-- downstairs -->
-          <img src=/thumb/IMG_20180816_145632.jpg>
-          <img src=/thumb/IMG_20180816_145646.jpg>
-          <img src=/thumb/IMG_20180814_170447.jpg>
+          <figure>
+            <img src=/thumb/IMG_20180816_145650.jpg>
+            <figcaption>
+              <ul>
+                <li>
+                  Downstairs Jack and Jill, shower, (no tub), there is another half
+                  bath downstairs so you do not have to enter bedroom to use a
+                  bathroom.
+                </li>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src=/thumb/IMG_20180816_145715.jpg>
+            <figcaption>
+              <ul>
+                <li>Queen bed</li>
+                <li>TV</li>
+                <li>Closet</li>
+                <li>Jack and Jill bath</li>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src=/thumb/IMG_20180816_145646.jpg>
+            <figcaption>
+              <ul>
+                <li>
+                  Master bedroom, first floor, king bed, TV, connects to Jack
+                  and Jill bath
+                </li>
+            </figcaption>
+          </figure>
         </section>
       </section>
       <section id=oib class=tab>
@@ -268,27 +358,64 @@
           return Array.prototype.slice.call(ele.querySelectorAll(query));
         };
 
-        function enableTabs(parentId) {
-          let tabs = $('#' + parentId + ' >nav li');
-          let panels = $('#' + parentId + ' >section.tab');
+        let defaultTabs = ['main', 'exterior'];
+
+        // The tab selections are stored as ':' separated values in the location hash.
+        function getParsedHashes() {
+          let hashes = window.location.hash.slice(1).split(':');
+          for (var i = 0; i < defaultTabs.length; i++) {
+            if (!hashes[i]) {
+              hashes[i] = defaultTabs[i];
+            }
+          }
+          return hashes;
+        }
+
+        function updateHash(value, position) {
+          let hashes = getParsedHashes();
+          hashes[position] = value;
+          window.location.hash = hashes.join(':');
+        }
+
+        function getHashValue(position) {
+          let hashes = getParsedHashes();
+          return hashes[position];
+        }
+
+        function enableTabs(parentId, hashPosition) {
+          let tabs = $(`#${parentId} >nav li`);
+          let panels = $(`#${parentId} >section.tab`);
 
           tabs.forEach(e => {
             e.addEventListener('click', e => tabClicked(e));
           })
 
           function tabClicked(e) {
+            let tabId = e.target.dataset.id;
+            updateHash(tabId, hashPosition);
+            activateTab(tabId);
+          }
+
+          function activateTab(tabId) {
             tabs.forEach(ele => {
-              ele.classList.remove('active');
+              if (ele.dataset.id === tabId) {
+                ele.classList.add('active');
+              } else {
+                ele.classList.remove('active');
+              }
             });
             panels.forEach(ele => {
-              ele.classList.remove('active');
+              if (ele.id === tabId) {
+                ele.classList.add('active');
+              } else {
+                ele.classList.remove('active');
+              }
             });
-            e.target.classList.add('active');
-            $('#' + e.target.dataset.id)[0].classList.add('active');
           }
+          activateTab(getHashValue(hashPosition));
         }
-        enableTabs('top');
-        enableTabs('tour');
+        enableTabs('top', 0);
+        enableTabs('tour', 1);
       })();
     </script>
   </body>
