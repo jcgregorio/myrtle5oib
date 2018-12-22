@@ -6,6 +6,7 @@
     <meta name="theme-color" content="#497ba7"/>
     <meta name="Description" content="Beach house for rent at 5 Myrtle Court, Ocean Isle Beach, NC">
     <title>High-Seas Zen - 5 Myrtle Court, Ocean Isle Beach, NC</title>
+    <link rel="stylesheet" media="screen, projection" href="./luminous-basic.min.css" />
     <style media='screen'>
       body {
         padding: 0;
@@ -60,6 +61,10 @@
         margin-top: 0.6em;
         margin-left: 0.6em;
         box-shadow: 3px 3px 5px 2px #9D9D9D;
+      }
+
+      .zoom {
+        cursor: zoom-in;
       }
 
       main > section div {
@@ -156,7 +161,9 @@
           <li>Across the street from The Isles Restaurant</li>
         </ul>
         <p>
-          <img id=steps alt="Beach access is visible from the beach house yard." src=/thumb/steps.jpg>
+          <a href=/images/steps.jpg class=zoom>
+            <img id=steps alt="Beach access is visible from the beach house yard." src=/thumb/steps.jpg>
+          </a>
         </p>
       </section>
       <section id=tour class=tab>
@@ -170,7 +177,9 @@
         </nav>
         <section id=exterior class="tab active">
           <figure>
-            <img src=/thumb/IMG_20180721_131043.jpg>
+            <a href=/images/IMG_20180721_131043.jpg class=zoom>
+              <img src=/thumb/IMG_20180721_131043.jpg>
+            </a>
             <figcaption>
               <ul>
                 <li>
@@ -180,7 +189,9 @@
           </figure>
 
           <figure>
-            <img src=/thumb/IMG_20180721_131524.jpg>
+            <a href=/images/IMG_20180721_131524.jpg class=zoom>
+              <img src=/thumb/IMG_20180721_131524.jpg>
+            </a>
             <figcaption>
               <ul>
                 <li>
@@ -468,7 +479,21 @@
     </script>
     <script src="./Luminous.min.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8">
-      new Luminous(document.querySelector("a.zoom"));
+      new LuminousGallery(
+        document.querySelectorAll("a.zoom"),
+        {
+          arrowNavigation: true
+        },
+        {
+          caption: function(trigger) {
+            let cap = trigger.querySelector("img").getAttribute("alt");
+            if (!cap) {
+              cap = trigger.nextElementSibling.textContent;
+            }
+            return cap;
+          }
+        }
+      );
     </script>
   </body>
 </html>
