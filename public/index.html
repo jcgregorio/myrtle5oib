@@ -145,7 +145,9 @@
         </ul>
       </nav>
       <section id=main class="active tab">
-        <img alt="The two story beach house with a front porch that faces the beach." src=/thumb/IMG_20180721_131508.jpg>
+        <a href=/images/IMG_20180721_131508.jpg class=zoom>
+          <img alt="The two story beach house with a front porch that faces the beach." src=/thumb/IMG_20180721_131508.jpg>
+        </a>
         <ul>
           <li><span class=hl>60</span> steps to beach access</li>
           <li title="4 bedrooms, 1 king, 2 queen, 2 twin, 1 sofa bed">Bedrooms <span class=hl>4</span> - 1K, 2Q, 2T, 1SB</li>
@@ -305,6 +307,7 @@
           </figure>
           <figure>
             <img src=/thumb/IMG_20180816_145646.jpg>
+            <img src=/thumb/IMG_20180816_145632.jpg>
             <figcaption>
               <ul>
                 <li>King bed</li>
@@ -325,6 +328,7 @@
         <section id=bedrooms class="tab">
           <figure>
             <img src=/thumb/IMG_20180816_145646.jpg>
+            <img src=/thumb/IMG_20180816_145632.jpg>
             <figcaption>
               <ul>
                 <li>King bed</li>
@@ -335,6 +339,7 @@
           </figure>
           <figure>
             <img src=/thumb/Downstairs-queen.jpg>
+            <img src=/thumb/Downstairs-queen-TV.jpg>
             <figcaption>
               <ul>
                 <li>Queen bed</li>
@@ -354,6 +359,7 @@
             </figcaption>
           </figure>
           <figure>
+            <img src=/thumb/Upstairs-twin-beds.jpg>
             <img src=/thumb/Upstairs-twin-TV.jpg>
             <figcaption>
               <ul>
@@ -459,6 +465,10 @@
         enableTabs('top', 0);
         enableTabs('tour', 1);
       })();
+    </script>
+    <script src="./Luminous.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+      new Luminous(document.querySelector("a.zoom"));
     </script>
   </body>
 </html>
