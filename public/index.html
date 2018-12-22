@@ -200,7 +200,9 @@
             </figcaption>
           </figure>
           <figure>
-            <img src=/thumb/IMG_20180721_132156.jpg>
+            <a href=/images/IMG_20180721_132156.jpg class=zoom>
+              <img src=/thumb/IMG_20180721_132156.jpg>
+            </a>
             <figcaption>
               <ul>
                 <li>
@@ -209,7 +211,9 @@
             </figcaption>
           </figure>
           <figure>
-            <img src=/thumb/IMG_20180825_200438.jpg>
+            <a href=/images/IMG_20180825_200438.jpg class=zoom>
+              <img src=/thumb/IMG_20180825_200438.jpg>
+            </a>
             <figcaption>
               <ul>
                 <li>
@@ -218,7 +222,9 @@
             </figcaption>
           </figure>
           <figure>
-            <img src=/thumb/IMG_20180721_131432.jpg>
+            <a href=/images/IMG_20180721_131432.jpg class=zoom>
+              <img src=/thumb/IMG_20180721_131432.jpg>
+            </a>
             <figcaption>
               <ul>
                 <li>
@@ -228,7 +234,9 @@
             </figcaption>
           </figure>
           <figure>
-            <img src=/thumb/IMG_20180630_103623.jpg>
+            <a href=/images/IMG_20180630_103623.jpg class=zoom>
+              <img src=/thumb/IMG_20180630_103623.jpg>
+            </a>
             <figcaption>
               <ul>
                 <li>
@@ -239,15 +247,21 @@
         </section>
         <section id=upstairs class="tab">
           <figure>
-            <img src=/thumb/Upstairs-JnJ-bath.jpg>
+            <a href=/images/Upstairs-JnJ-bath.jpg class=zoom>
+              <img src=/thumb/Upstairs-JnJ-bath.jpg>
+            </a>
             <figcaption>
               <ul>
                 <li>Jack and Jill bathroom connects the upstairs bedrooms</li>
             </figcaption>
           </figure>
           <figure>
-            <img src=/thumb/Upstairs-twin-TV.jpg>
-            <img src=/thumb/Upstairs-twin-beds.jpg>
+            <a href=/images/Upstairs-twin-TV.jpg class=zoom>
+              <img src=/thumb/Upstairs-twin-TV.jpg>
+            </a>
+            <a href=/images/Upstairs-twin-beds.jpg class=zoom>
+              <img src=/thumb/Upstairs-twin-beds.jpg>
+            </a>
             <figcaption>
               <ul>
                 <li>Two twin beds</li>
@@ -488,7 +502,7 @@
           caption: function(trigger) {
             let cap = trigger.querySelector("img").getAttribute("alt");
             if (!cap) {
-              cap = trigger.nextElementSibling.textContent;
+              cap =  trigger.parentElement.querySelector("figcaption").textContent;
             }
             return cap;
           }
